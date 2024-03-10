@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>
+            Contact Form 
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Get in touch</h2>
+                    <hr>
+                </div>
+                <input type="hidden" name="access_key" value="27c53d44-8ca1-4fe8-acb1-f22b3a6aea4f">
+                <input type="text" name="name" placeholder="your name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="your email" class="contact-inputs" required>
+                <textarea name="message" placeholder="your message" class="contact-inputs" required></textarea>
+                <button type="submit">Submit <img src="assets/arrow_icon.png" alt=""></button>
+            </form>
+            <div class="conatct-right">
+             <img src="assets/right_img.png" alt="">
+            </div>
+        </div>
+    </body>
+</html>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    body{
+    font-family: 'outfit';
+    background-color: rgb(136, 46, 46);
+}
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-left-title h2{
+    font-weight: 600;
+    color: #a363aa;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color:#a363aa;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+
+}
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid #000000;
+}
+.contact-inputs::placeholder{
+    color: #080808;
+}
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-display: 16px;
+    color: #ececec;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: red;
+    cursor: pointer;
+}
+.contact-right img{
+    width: 500px;
+}
+@media (max-width:800px) {
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
+}
+</style>
